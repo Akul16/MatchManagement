@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
+
+namespace MatchManagement.Models
+{
+    public class Match
+    {
+        public int MatchId { get; set; }
+
+        [ForeignKey("HomeTeam")]
+        public int HomeTeamId { get; set; }
+        public virtual Team HomeTeam { get; set; }
+
+        public DateTime Date { get; set; }
+        public TimeSpan Time { get; set; }
+
+        public int VenueId { get; set; }    
+        public virtual Venue Venue { get; set; }
+
+    }
+
+    public class MatchDto
+    {
+        public int MatchId { get; set;}
+        public int HomeTeamId { get; set;}
+
+        public DateTime Date { get; set; }
+        public TimeSpan Time { get; set; }
+
+        public int VenueId { get; set; }
+
+    }
+}

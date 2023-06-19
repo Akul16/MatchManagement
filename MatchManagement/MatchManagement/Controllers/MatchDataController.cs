@@ -32,7 +32,7 @@ namespace MatchManagement.Controllers
                 MatchId = a.MatchId,
                 HomeTeamName = a.HomeTeam.TeamName,
                 Date = a.Date,
-                Time = a.Time,
+                Time = a.Time.ToString(),
                 VenueName = a.Venue.VenueName,
                 OpponentTeam= a.OpponentTeam,
             }));
@@ -51,7 +51,7 @@ namespace MatchManagement.Controllers
                 MatchId = Match.MatchId,
                 HomeTeamName = Match.HomeTeam.TeamName,
                 Date = Match.Date,
-                Time = Match.Time,
+                Time = Match.Time.ToString(),
                 VenueName = Match.Venue.VenueName,
                 OpponentTeam = Match.OpponentTeam,
             };

@@ -32,7 +32,7 @@ namespace MatchManagement.Models
         public string OpponentTeam { get; set; }
 
         public DateTime Date { get; set; }
-        public TimeSpan Time { get; set; }
+        public string Time { get; set; }
 
         public string VenueName { get; set; }
 

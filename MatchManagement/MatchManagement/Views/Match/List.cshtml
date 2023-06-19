@@ -1,0 +1,12 @@
+﻿@model IEnumerable<MatchManagement.Models.MatchDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+@foreach (var match in Model)
+{
+    <h2><a href="/Match/Details/@match.MatchId">@match.HomeTeamName  VS @match.OpponentTeam</a></h2>
+}
+

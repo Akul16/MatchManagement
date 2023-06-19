@@ -1,0 +1,26 @@
+﻿@model MatchManagement.Models.Match
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Create Match</h2>
+<form action="/Match/Create" method="POST">
+    <div>
+        <label>Home Team </label> <input type="number" name="HomeTeamId" id="HomeTeamId"  value="" />
+    </div>
+    <div>
+        <label>Opponent Team</label> <input type="text" name="OpponentTeam" id="OpponentTeam" value="" />
+    </div>
+
+    <div>
+        <label>Date</label> <input type="datetime" name="Date" id="Date" value="" />
+    </div>
+    <div>
+        <label>Time</label> <input type="time" name="Time" id="Time" value="" />
+    </div>
+    <div>
+        <label>Venue id</label> <input type="number" name="VenueId" id="VenueId" value=""/>
+    </div>
+    <input type="submit" value="Add Match" />
+
+</form>

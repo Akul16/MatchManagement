@@ -1,0 +1,13 @@
+﻿@model MatchManagement.Models.MatchDto
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<a href="/Match/List">Go to Matches</a>
+<h2>@Model.HomeTeamName</h2>
+<div>@Model.OpponentTeam</div>
+<div>@Model.Date</div>
+<div>@Model.Time</div>
+<div>@Model.VenueName</div>

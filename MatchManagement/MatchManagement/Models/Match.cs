@@ -14,23 +14,27 @@ namespace MatchManagement.Models
         public int HomeTeamId { get; set; }
         public virtual Team HomeTeam { get; set; }
 
+        public string OpponentTeam { get; set; }
+
         public DateTime Date { get; set; }
         public TimeSpan Time { get; set; }
 
-        public int VenueId { get; set; }    
+        public int VenueId { get; set; }
         public virtual Venue Venue { get; set; }
 
     }
 
     public class MatchDto
     {
-        public int MatchId { get; set;}
-        public int HomeTeamId { get; set;}
+        public int MatchId { get; set; }
+        public string HomeTeamName { get; set; }
+
+        public string OpponentTeam { get; set; }
 
         public DateTime Date { get; set; }
         public TimeSpan Time { get; set; }
 
-        public int VenueId { get; set; }
+        public string VenueName { get; set; }
 
     }
 }

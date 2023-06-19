@@ -30,10 +30,11 @@ namespace MatchManagement.Controllers
             Matches.ForEach(a => MatchDtos.Add(new MatchDto()
             {
                 MatchId = a.MatchId,
-                HomeTeamId = a.HomeTeamId,
+                HomeTeamName = a.HomeTeam.TeamName,
                 Date = a.Date,
                 Time = a.Time,
-                VenueId = a.VenueId,
+                VenueName = a.Venue.VenueName,
+                OpponentTeam= a.OpponentTeam,
             }));
             return MatchDtos;
 
@@ -48,10 +49,11 @@ namespace MatchManagement.Controllers
             MatchDto MatchDto = new MatchDto()
             {
                 MatchId = Match.MatchId,
-                HomeTeamId = Match.HomeTeamId,
+                HomeTeamName = Match.HomeTeam.TeamName,
                 Date = Match.Date,
                 Time = Match.Time,
-                VenueId = Match.VenueId,
+                VenueName = Match.Venue.VenueName,
+                OpponentTeam = Match.OpponentTeam,
             };
             if (Match == null)
             {
